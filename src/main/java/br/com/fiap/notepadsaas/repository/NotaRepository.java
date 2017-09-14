@@ -9,4 +9,6 @@ public interface NotaRepository extends MongoRepository<Nota, String> {
 
     List<Nota> findByTitulo(String titulo);
 
+    Nota findById(String id);
+
 }

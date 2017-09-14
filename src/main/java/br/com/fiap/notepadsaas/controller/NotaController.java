@@ -22,9 +22,14 @@ public class NotaController {
         return notaRepository.findAll();
     }
 
-    @GetMapping(value = "{titulo}")
+    @GetMapping(value = "/titulo={titulo}")
     private List<Nota> findByTitulo(@PathVariable(value = "titulo") String q) {
         return notaRepository.findByTitulo(q);
+    }
+
+    @GetMapping(value = "/id={id}")
+    private Nota findById(@PathVariable(value = "id") String q) {
+        return notaRepository.findById(q);
     }
 
     @PostMapping
