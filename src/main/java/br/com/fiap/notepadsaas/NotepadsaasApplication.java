@@ -1,4 +1,4 @@
-package br.com.heiderlopes.notepadsaas;
+package br.com.fiap.notepadsaas;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

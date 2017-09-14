@@ -1,7 +1,7 @@
-package br.com.heiderlopes.notepadsaas.controller;
+package br.com.fiap.notepadsaas.controller;
 
-import br.com.heiderlopes.notepadsaas.model.Nota;
-import br.com.heiderlopes.notepadsaas.repository.NotaRepository;
+import br.com.fiap.notepadsaas.model.Nota;
+import br.com.fiap.notepadsaas.repository.NotaRepository;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

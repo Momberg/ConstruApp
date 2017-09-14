@@ -1,6 +1,6 @@
-package br.com.heiderlopes.notepadsaas.repository;
+package br.com.fiap.notepadsaas.repository;
 
-import br.com.heiderlopes.notepadsaas.model.Nota;
+import br.com.fiap.notepadsaas.model.Nota;
 import java.util.List;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;

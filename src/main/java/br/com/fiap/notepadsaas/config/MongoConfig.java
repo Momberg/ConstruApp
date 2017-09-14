@@ -1,4 +1,4 @@
-package br.com.heiderlopes.notepadsaas.config;
+package br.com.fiap.notepadsaas.config;
 
 import com.mongodb.Mongo;
 import com.mongodb.MongoClient;
