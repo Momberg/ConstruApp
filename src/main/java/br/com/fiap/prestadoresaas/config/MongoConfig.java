@@ -1,4 +1,4 @@
-package br.com.fiap.notepadsaas.config;
+package br.com.fiap.prestadoresaas.config;
 
 import com.mongodb.Mongo;
 import com.mongodb.MongoClient;

@@ -1,7 +1,7 @@
-package br.com.fiap.notepadsaas.controller;
+package br.com.fiap.prestadoresaas.controller;
 
-import br.com.fiap.notepadsaas.model.Prestador;
-import br.com.fiap.notepadsaas.repository.PrestadorRepository;
+import br.com.fiap.prestadoresaas.model.Prestador;
+import br.com.fiap.prestadoresaas.repository.PrestadorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,4 +1,4 @@
-package br.com.fiap.notepadsaas.model;
+package br.com.fiap.prestadoresaas.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

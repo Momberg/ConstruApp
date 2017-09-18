@@ -1,8 +1,7 @@
-package br.com.fiap.notepadsaas;
+package br.com.fiap.prestadoresaas;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.CrossOrigin;
 
 @SpringBootApplication
 public class NotepadsaasApplication {
