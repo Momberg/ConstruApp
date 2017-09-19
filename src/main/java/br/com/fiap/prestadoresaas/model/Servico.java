@@ -1,4 +1,4 @@
-package br.com.fiap.notepadsaas.model;
+package br.com.fiap.prestadoresaas.model;
 
 public class Servico {
 
