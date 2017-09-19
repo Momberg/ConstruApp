@@ -1,6 +1,6 @@
-package br.com.fiap.notepadsaas.repository;
+package br.com.fiap.prestadoresaas.repository;
 
-import br.com.fiap.notepadsaas.model.Prestador;
+import br.com.fiap.prestadoresaas.model.Prestador;
 import java.util.List;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
