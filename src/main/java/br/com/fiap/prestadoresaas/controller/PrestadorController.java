@@ -48,20 +48,20 @@ public class PrestadorController {
         return prestadorRepository.findListByCpf(q);
     }
 
+    @GetMapping(value = "/lista/tipo={tipo}")
+    private List<Prestador> findListByTipo(@PathVariable(value = "tipo") String q){
+        return prestadorRepository.findListByTipo(q);
+    }
+
     @PostMapping
     private void save(@RequestBody Prestador prestador) {
-        if(verifyIfPrestadorExists(prestador)){
-            return;
-        }
+        if(verifyIfPrestadorExists(prestador)) return;
         prestadorRepository.save(prestador);
     }
 
-    private Boolean verifyIfPrestadorExists(Prestador prestador){
-        Prestador p = prestadorRepository.findByCpf(prestador.getcpf());
-        String cpf = ObjectUtils.isEmpty(p) ? "" : p.getcpf();
-        if(!(prestador.getcpf().trim()).equals(cpf)){
-            return Boolean.FALSE;
-        }
+    private Boolean verifyIfPrestadorExists(Prestador prestador) {
+        String cpf = ObjectUtils.isEmpty(findByCpf(prestador.getcpf())) ? "" : prestador.getcpf();
+        if(cpf.isEmpty()) return Boolean.FALSE;
         return Boolean.TRUE;
     }
 

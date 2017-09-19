@@ -1,7 +1,10 @@
 package br.com.fiap.prestadoresaas.controller;
 
+import br.com.fiap.prestadoresaas.model.Prestador;
 import br.com.fiap.prestadoresaas.model.Servico;
+import br.com.fiap.prestadoresaas.repository.PrestadorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.*;
 import br.com.fiap.prestadoresaas.repository.ServicoRepository;
 
@@ -13,7 +16,10 @@ import java.util.List;
 public class ServicoController {
 
     @Autowired
-    ServicoRepository servicoRepository;
+    private ServicoRepository servicoRepository;
+
+    @Autowired
+    private PrestadorRepository prestadorRepository;
 
     @GetMapping(value = "/lista/tipoServico={tipoServico}")
     private List<Servico> findListByTipoServico(@PathVariable(value = "tipoServico") String q){
@@ -32,7 +38,14 @@ public class ServicoController {
 
     @PostMapping
     private void save(@RequestBody Servico servico) {
+        if(verifyIfIdPrestadorExists(servico)) return;
         servicoRepository.save(servico);
+    }
+
+    private Boolean verifyIfIdPrestadorExists(Servico servico) {
+        String id = ObjectUtils.isEmpty(prestadorRepository.findById(servico.getIdPrestador())) ? "" : servico.getIdPrestador();
+        if(id.isEmpty()) return Boolean.TRUE;
+        return Boolean.FALSE;
     }
 
 }

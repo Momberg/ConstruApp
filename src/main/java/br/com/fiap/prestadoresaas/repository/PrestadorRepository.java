@@ -16,4 +16,6 @@ public interface PrestadorRepository extends MongoRepository<Prestador, String> 
 
     List<Prestador> findListByCpf(String cpf);
 
+    List<Prestador> findListByTipo(String tipo);
+
 }
