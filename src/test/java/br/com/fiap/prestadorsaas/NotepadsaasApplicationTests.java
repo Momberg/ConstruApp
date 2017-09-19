@@ -1,4 +1,4 @@
-package br.com.fiap.notepadsaas;
+package br.com.fiap.prestadorsaas;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
