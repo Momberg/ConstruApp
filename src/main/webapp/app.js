@@ -4,7 +4,7 @@ angular.module('saasApp', [])
         function listar(callback) {
             $http({
                 method:'GET',
-                url:'/nota'
+                url:'/prestador'
             }).then(function (data) {
                 if (callback) callback(data)
             });
@@ -13,7 +13,7 @@ angular.module('saasApp', [])
         function salvar(hq, callback) {
             $http({
                 method:'POST',
-                url:'/nota',
+                url:'/prestador',
                 data:JSON.stringify(hq)
             }).then(function (data) {
                 if (callback) callback(data)

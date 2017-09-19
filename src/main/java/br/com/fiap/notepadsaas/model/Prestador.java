@@ -10,8 +10,6 @@ public class Prestador {
     private String id;
     private String nome;
     private String cpf;
-    private String tipoServico;
-    private String localServico;
 
     public String getId() {
         return id;
@@ -35,22 +33,6 @@ public class Prestador {
 
     public void setcpf(String cpf) {
         this.cpf = cpf;
-    }
-
-    public String getTipoServico() {
-        return tipoServico;
-    }
-
-    public void setTipoServico(String tipoServico) {
-        this.tipoServico = tipoServico;
-    }
-
-    public String getLocalServico() {
-        return localServico;
-    }
-
-    public void setLocalServico(String localServico) {
-        this.localServico = localServico;
     }
 
     @Override
