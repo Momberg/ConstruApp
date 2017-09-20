@@ -1,6 +1,5 @@
 package br.com.fiap.prestadoresaas.controller;
 
-import br.com.fiap.prestadoresaas.model.Prestador;
 import br.com.fiap.prestadoresaas.model.Servico;
 import br.com.fiap.prestadoresaas.repository.PrestadorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +19,11 @@ public class ServicoController {
 
     @Autowired
     private PrestadorRepository prestadorRepository;
+
+    @GetMapping
+    private List<Servico> findAll() {
+        return servicoRepository.findAll();
+    }
 
     @GetMapping(value = "/lista/tipoServico={tipoServico}")
     private List<Servico> findListByTipoServico(@PathVariable(value = "tipoServico") String q){
