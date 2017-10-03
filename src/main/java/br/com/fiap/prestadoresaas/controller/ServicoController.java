@@ -19,7 +19,7 @@ public class ServicoController {
 
     @Autowired
     private PrestadorRepository prestadorRepository;
-//comentario teste
+
     @GetMapping
     private List<Servico> findAll() {
         return servicoRepository.findAll();
